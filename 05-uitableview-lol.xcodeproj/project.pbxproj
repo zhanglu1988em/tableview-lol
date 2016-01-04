@@ -13,6 +13,8 @@
 		A69077301C3AB08A00EA3C1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A690772E1C3AB08A00EA3C1C /* Main.storyboard */; };
 		A69077321C3AB08A00EA3C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A69077311C3AB08A00EA3C1C /* Assets.xcassets */; };
 		A69077351C3AB08A00EA3C1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69077331C3AB08A00EA3C1C /* LaunchScreen.storyboard */; };
+		A690773D1C3AB0C900EA3C1C /* heros.plist in Resources */ = {isa = PBXBuildFile; fileRef = A690773C1C3AB0C900EA3C1C /* heros.plist */; };
+		A69077401C3AB0E800EA3C1C /* HeroMode.m in Sources */ = {isa = PBXBuildFile; fileRef = A690773F1C3AB0E800EA3C1C /* HeroMode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		A69077311C3AB08A00EA3C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A69077341C3AB08A00EA3C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A69077361C3AB08A00EA3C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A690773C1C3AB0C900EA3C1C /* heros.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = heros.plist; sourceTree = "<group>"; };
+		A690773E1C3AB0E800EA3C1C /* HeroMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroMode.h; sourceTree = "<group>"; };
+		A690773F1C3AB0E800EA3C1C /* HeroMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroMode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +68,13 @@
 				A690772B1C3AB08A00EA3C1C /* ViewController.h */,
 				A690772C1C3AB08A00EA3C1C /* ViewController.m */,
 				A690772E1C3AB08A00EA3C1C /* Main.storyboard */,
+				A690773C1C3AB0C900EA3C1C /* heros.plist */,
 				A69077311C3AB08A00EA3C1C /* Assets.xcassets */,
 				A69077331C3AB08A00EA3C1C /* LaunchScreen.storyboard */,
 				A69077361C3AB08A00EA3C1C /* Info.plist */,
 				A69077251C3AB08A00EA3C1C /* Supporting Files */,
+				A690773E1C3AB0E800EA3C1C /* HeroMode.h */,
+				A690773F1C3AB0E800EA3C1C /* HeroMode.m */,
 			);
 			path = "05-uitableview-lol";
 			sourceTree = "<group>";
@@ -138,6 +146,7 @@
 			files = (
 				A69077351C3AB08A00EA3C1C /* LaunchScreen.storyboard in Resources */,
 				A69077321C3AB08A00EA3C1C /* Assets.xcassets in Resources */,
+				A690773D1C3AB0C900EA3C1C /* heros.plist in Resources */,
 				A69077301C3AB08A00EA3C1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69077401C3AB0E800EA3C1C /* HeroMode.m in Sources */,
 				A690772D1C3AB08A00EA3C1C /* ViewController.m in Sources */,
 				A690772A1C3AB08A00EA3C1C /* AppDelegate.m in Sources */,
 				A69077271C3AB08A00EA3C1C /* main.m in Sources */,

@@ -7,21 +7,64 @@
 //
 
 #import "ViewController.h"
+#import "HeroMode.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic,strong) UITableView*  tableView;
+@property (nonatomic,strong) NSArray*  dataList;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+-(void) viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self tableView];
+    self.tableView.rowHeight = 80;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(UITableView*) tableView
+{
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        [self.view addSubview:_tableView];
+    }
+    return _tableView;
+}
+
+-(NSArray*) dataList
+{
+    if (_dataList == nil) _dataList =  [HeroMode heros];
+    
+    return _dataList;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataList.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSString* id = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:id];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:id];
+        NSLog(@"create uitableviewcell");
+    }
+    
+    HeroMode *mode = self.dataList[indexPath.row];
+    [cell.textLabel setText:mode.name];
+    [cell.imageView setImage:[UIImage imageNamed:mode.icon]];
+    [cell.detailTextLabel setText:mode.intro];
+    
+    return cell;
 }
 
 @end
